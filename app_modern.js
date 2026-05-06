@@ -1,4 +1,4 @@
-// High-end restaurant website interactions
+// Professional restaurant website interactions
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -8,22 +8,24 @@ const menuItems = document.querySelectorAll('.menu-item');
 const fadeElements = document.querySelectorAll('.fade-in-up');
 const bookingForm = document.getElementById('bookingForm');
 const bookingMessage = document.getElementById('bookingMessage');
-const aboutParallax = document.querySelector('.about-parallax');
 
+// Mobile navigation toggle
 function toggleNav() {
     if (!navMenu) return;
-    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', String(!expanded));
     navMenu.classList.toggle('open');
+    navToggle.classList.toggle('active');
 }
 navToggle?.addEventListener('click', toggleNav);
+
+// Close mobile menu when clicking nav links
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.classList.remove('active');
     });
 });
 
+// Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', event => {
         const targetId = link.getAttribute('href');
@@ -39,14 +41,112 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
+// Navbar scroll effect
+let lastScrollTop = 0;
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+        navbar.style.transform = 'translateY(-100%)';
+    } else {
+        navbar.style.transform = 'translateY(0)';
+    }
+    lastScrollTop = scrollTop;
+});
+
+// Intersection Observer for fade-in animations
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
         }
     });
-}, { threshold: 0.15 });
+}, { threshold: 0.1 });
+
 fadeElements.forEach(el => observer.observe(el));
+
+// Menu filtering
+menuFilters.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter || 'all';
+
+        menuFilters.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        menuItems.forEach(item => {
+            if (filter === 'all' || item.dataset.category === filter) {
+                item.style.display = 'block';
+                setTimeout(() => item.style.opacity = '1', 10);
+            } else {
+                item.style.opacity = '0';
+                setTimeout(() => item.style.display = 'none', 300);
+            }
+        });
+    });
+});
+
+// Reservation form handling
+bookingForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(bookingForm);
+
+    bookingMessage.textContent = 'Processing your reservation...';
+    bookingMessage.style.color = '#d4af37';
+
+    try {
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        bookingMessage.textContent = 'Reservation confirmed! We look forward to welcoming you.';
+        bookingMessage.style.color = '#4CAF50';
+        bookingForm.reset();
+    } catch (error) {
+        bookingMessage.textContent = 'Sorry, there was an error. Please try again.';
+        bookingMessage.style.color = '#f44336';
+    }
+});
+
+// Parallax effect for about section
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.about-parallax');
+
+    parallaxElements.forEach(el => {
+        const rate = scrolled * -0.5;
+        el.style.transform = `translateY(${rate}px)`;
+    });
+});
+
+// Initialize page
+document.addEventListener('DOMContentLoaded', () => {
+    // Add loading animation
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = '1';
+    }, 100);
+
+    // Set active nav link based on scroll position
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            if (pageYOffset >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+});
 
 menuFilters.forEach(button => {
     button.addEventListener('click', () => {
