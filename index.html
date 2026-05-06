@@ -13,37 +13,37 @@
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="#home" class="logo">Westwood Bites</a>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-menu">
-            <li><a href="#home" class="nav-link active">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#menu" class="nav-link">Menu</a></li>
-            <li><a href="#gallery" class="nav-link">Gallery</a></li>
-            <li><a href="#reservation" class="nav-link">Reserve</a></li>
-            <li><a href="#reservation" class="btn btn-cta nav-cta">Book a Table</a></li>
-        </ul>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="hero-video">
+<!-- Hero Section with Overlapping About -->
+<section id="home" class="hero-overlap">
+    <div class="hero-background">
         <video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1543353071-873f17a7a088?w=1600&auto=format&fit=crop&q=80">
             <source src="https://player.vimeo.com/external/370362195.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6ab7a0c4e6&profile_id=165" type="video/mp4">
         </video>
+        <div class="hero-gradient-overlay"></div>
     </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
+    
+    <nav class="navbar-overlay">
+        <div class="nav-container">
+            <a href="#home" class="logo">Westwood Bites</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#reservation" class="nav-link">Reserve</a></li>
+                <li><a href="#reservation" class="btn btn-cta nav-cta">Book a Table</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="hero-content-overlap">
         <span class="eyebrow">Sophisticated Dining Experience</span>
-        <h1>Westwood Bites</h1>
+        <h1 class="hero-title">Westwood Bites</h1>
         <p class="hero-subtitle">Where culinary artistry meets unforgettable moments. Experience the perfect blend of tradition and innovation in the heart of Kuala Lumpur.</p>
         <div class="hero-actions">
             <a href="#reservation" class="btn btn-cta">Reserve Your Table</a>
@@ -64,54 +64,27 @@
             </div>
         </div>
     </div>
-</section>
-
-<!-- About Section -->
-<section id="about" class="about section">
-    <div class="container about-grid">
-        <div class="about-copy">
-            <span class="eyebrow">Our Story</span>
-            <h2>Heritage, Craft & Modern Excellence</h2>
-            <p>Chef Marcus Chen grew up in lantern-lit kitchens across Penang, learning how simplicity and precision transform the ordinary into something unforgettable. At Westwood Bites, his narrative is expressed through carefully curated courses, moody lighting, and a seamless reservation flow that removes friction before the meal begins.</p>
-            <p>Our philosophy centers on the idea that every plate should feel like a whispered story. Each reservation should feel effortless, every space should feel intimate, and every guest should leave with an experience worth sharing.</p>
-            <div class="about-highlights">
-                <div class="highlight-card">
-                    <h3>Chef's Heritage</h3>
-                    <p>Asian spice palettes meet classic French structure, plated with the drama of modern fine dining.</p>
-                </div>
-                <div class="highlight-card">
-                    <h3>Modern Innovation</h3>
-                    <p>Cutting-edge techniques combined with time-honored traditions create unforgettable culinary experiences.</p>
-                </div>
-            </div>
-        </div>
-        <div class="about-visual">
-            <img src="https://images.unsplash.com/photo-1490641933780-5bd2912b7f54?w=800&auto=format&fit=crop&q=80" alt="Restaurant interior">
-        </div>
-    </div>
-</section>
-                </div>
-                <div class="highlight-card">
-                    <h3>One-Touch Booking</h3>
-                    <p>Instant reservation flow from every dish card and every page section, designed to keep momentum high.</p>
-                </div>
-            </div>
-        </div>
-        <div class="about-visual fade-in-up">
-            <div class="about-parallax" data-speed="0.28"></div>
-            <div class="about-tiles">
-                <div class="tile tile-large">
-                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&fit=crop&q=80" alt="Chef preparing signature dish" loading="lazy">
-                    <div class="tile-copy">
-                        <h4>From ancestral kitchens to modern plating.</h4>
+    
+    <div class="about-card-overlap">
+        <div class="container about-grid">
+            <div class="about-copy">
+                <span class="eyebrow">Our Story</span>
+                <h2>Heritage, Craft & Modern Excellence</h2>
+                <p>Chef Marcus Chen grew up in lantern-lit kitchens across Penang, learning how simplicity and precision transform the ordinary into something unforgettable. At Westwood Bites, his narrative is expressed through carefully curated courses, moody lighting, and a seamless reservation flow that removes friction before the meal begins.</p>
+                <p>Our philosophy centers on the idea that every plate should feel like a whispered story. Each reservation should feel effortless, every space should feel intimate, and every guest should leave with an experience worth sharing.</p>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <h3>Chef's Heritage</h3>
+                        <p>Asian spice palettes meet classic French structure, plated with the drama of modern fine dining.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Modern Innovation</h3>
+                        <p>Cutting-edge techniques combined with time-honored traditions create unforgettable culinary experiences.</p>
                     </div>
                 </div>
-                <div class="tile tile-small">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&fit=crop&q=80" alt="Fine dining atmosphere" loading="lazy">
-                    <div class="tile-copy">
-                        <p>Atmosphere curated to heighten every sense.</p>
-                    </div>
-                </div>
+            </div>
+            <div class="about-visual-overlap">
+                <img src="https://images.unsplash.com/photo-1521017571498-febe412ead96?w=800&auto=format&fit=crop&q=80" alt="Restaurant interior">
             </div>
         </div>
     </div>
@@ -122,7 +95,7 @@
     <div class="container">
         <div class="chef-content">
             <div class="chef-image">
-                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=600&fit=crop&crop=center" alt="Chef Marcus Chen">
+                <img src="https://images.unsplash.com/photo-1577003832154-a02f6c6e2e04?w=500&h=600&fit=crop&crop=center" alt="Chef Marcus Chen">
                 <div class="chef-awards">
                     <div class="award">⭐ Michelin Star</div>
                     <div class="award">🏆 James Beard Nominee</div>
@@ -141,7 +114,7 @@
                 </div>
 
                 <div class="chef-signature">
-                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=200&h=100&fit=crop&crop=center" alt="Chef signature">
+                    <img src="https://images.unsplash.com/photo-1577003832154-a02f6c6e2e04?w=200&h=100&fit=crop&crop=center" alt="Chef signature">
                 </div>
             </div>
         </div>
@@ -196,7 +169,7 @@
             </article>
             <article class="menu-item fade-in-up" data-category="signature">
                 <div class="menu-media">
-                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=700&fit=crop&q=80" alt="Forest Cream" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700&fit=crop&q=80" alt="Forest Cream" loading="lazy">
                 </div>
                 <div class="menu-copy">
                     <div class="menu-meta">
