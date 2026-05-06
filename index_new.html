@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westwood Bites | Sophisticated Modern Dining</title>
+    <meta name="description" content="An immersive fine dining experience in Kuala Lumpur with a modern digital menu, seamless reservations, and elegant storytelling.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pQPdA5q2K6fT0pRqFqj+FImQya1t4m40xE3C50nO5Scd42F+jWb1Za3Zk5n6fihcNwd4xUnMjxn2B5Y8N/GXwg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style_combined.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#home" class="logo">Westwood Bites</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-menu">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#menu" class="nav-link">Menu</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#reservation" class="nav-link">Reserve</a>
+            <a href="#reservation" class="btn btn-cta nav-cta">Book a Table</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-media">
+        <video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1543353071-873f17a7a088?w=1600&auto=format&fit=crop&q=80" class="hero-video">
+            <source src="https://player.vimeo.com/external/370362195.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6ab7a0c4e6&profile_id=165" type="video/mp4">
+        </video>
+        <div class="hero-filter"></div>
+    </div>
+    <div class="hero-copy">
+        <span class="eyebrow">Sophisticated Modernity</span>
+        <h1>Signature dishes that move in slow motion and stay with you long after the last bite.</h1>
+        <p>From the first cinematic plate reveal to the final taste, every moment is designed to convert browsers into devoted guests.</p>
+        <div class="hero-actions">
+            <a href="#reservation" class="btn btn-primary">Reserve Your Table</a>
+            <a href="#menu" class="btn btn-secondary">Explore the Digital Menu</a>
+        </div>
+        <div class="hero-metrics">
+            <div class="metric">
+                <span>12</span>
+                <small>Years of Mastery</small>
+            </div>
+            <div class="metric">
+                <span>35+</span>
+                <small>Chef’s Signature Dishes</small>
+            </div>
+            <div class="metric">
+                <span>4.9/5</span>
+                <small>Guest Satisfaction</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about section-bg">
+    <div class="container about-grid">
+        <div class="about-copy fade-in-up">
+            <span class="eyebrow">About the experience</span>
+            <h2>Heritage, craft, and a modern table service designed to make every guest feel anticipated.</h2>
+            <p>Chef Marcus Chen grew up in lantern-lit kitchens across Penang, learning how simplicity and precision transform the ordinary into something unforgettable. At Westwood Bites, his narrative is expressed through carefully curated courses, moody lighting, and a one-touch reservation flow that removes friction before the meal begins.</p>
+            <p>Our philosophy is built on the idea that every plate should feel like a whispered story. Each reservation should feel effortless, every space should feel intimate, and every guest should leave with an experience worth sharing.</p>
+            <div class="about-highlights">
+                <div class="highlight-card">
+                    <h3>Chef’s Heritage</h3>
+                    <p>Asian spice palettes meet classic French structure, plated with the drama of modern fine dining.</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>One-Touch Booking</h3>
+                    <p>Instant reservation flow from every dish card and every page section, designed to keep momentum high.</p>
+                </div>
+            </div>
+        </div>
+        <div class="about-visual fade-in-up">
+            <div class="about-parallax" data-speed="0.28"></div>
+            <div class="about-tiles">
+                <div class="tile tile-large">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=900&fit=crop&q=80" alt="Chef preparing signature dish" loading="lazy">
+                    <div class="tile-copy">
+                        <h4>From ancestral kitchens to modern plating.</h4>
+                    </div>
+                </div>
+                <div class="tile tile-small">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&fit=crop&q=80" alt="Fine dining atmosphere" loading="lazy">
+                    <div class="tile-copy">
+                        <p>Atmosphere curated to heighten every sense.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Chef Section -->
+<section id="chef" class="chef">
+    <div class="container">
+        <div class="chef-content">
+            <div class="chef-image">
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500&h=600&fit=crop&crop=center" alt="Chef Marcus Chen">
+                <div class="chef-awards">
+                    <div class="award">⭐ Michelin Star</div>
+                    <div class="award">🏆 James Beard Nominee</div>
+                    <div class="award">🥇 Asia's Best Chef 2023</div>
+                </div>
+            </div>
+            <div class="chef-text">
+                <h2 class="section-title">Meet Chef Marcus Chen</h2>
+                <p class="chef-title">Executive Chef & Culinary Director</p>
+                <p>Chef Marcus Chen's culinary journey began in his grandmother's kitchen in Penang, where he first discovered the transformative power of fresh ingredients and traditional techniques. After training at prestigious institutions including Le Cordon Bleu Paris and sous chef positions at three-Michelin-starred restaurants, Marcus returned to Malaysia with a vision to create contemporary fine dining that honors both heritage and innovation.</p>
+                <p>His signature style blends the bold flavors of Southeast Asia with classical French techniques, resulting in dishes that are both familiar and extraordinary. Marcus's commitment to excellence has earned Westwood Bites international recognition and a loyal following of discerning food lovers.</p>
+
+                <div class="chef-quote">
+                    <blockquote>"Cooking is not just about feeding the body—it's about nourishing the soul and creating memories that last a lifetime."</blockquote>
+                    <cite>- Chef Marcus Chen</cite>
+                </div>
+
+                <div class="chef-signature">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=200&h=100&fit=crop&crop=center" alt="Chef signature">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="menu section-dark">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <span class="eyebrow">Digital menu</span>
+            <h2>Interactive tasting experiences without the PDF friction.</h2>
+            <p>Each dish is presented with evocative storytelling, clear pricing, and instant access to reserve the table that best matches your evening.</p>
+        </div>
+
+        <div class="menu-categories fade-in-up">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="signature">Signature</button>
+            <button class="category-btn" data-category="seafood">Seafood</button>
+            <button class="category-btn" data-category="meat">Meat</button>
+            <button class="category-btn" data-category="dessert">Dessert</button>
+        </div>
+
+        <div class="menu-grid">
+            <article class="menu-item fade-in-up" data-category="signature">
+                <div class="menu-media">
+                    <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?w=700&fit=crop&q=80" alt="Ember Night" loading="lazy">
+                </div>
+                <div class="menu-copy">
+                    <div class="menu-meta">
+                        <h3>Ember Night</h3>
+                        <span class="price">RM 88</span>
+                    </div>
+                    <p>Wagyu seared over oak embers, paired with roasted marrow, crisp seasonal roots, and a merlot reduction that feels smoky and silky.</p>
+                    <div class="menu-tags"><span>Signature</span><span>Premium</span></div>
+                    <button class="btn btn-secondary menu-action" data-dish="Ember Night">Reserve this dish</button>
+                </div>
+            </article>
+            <article class="menu-item fade-in-up" data-category="seafood">
+                <div class="menu-media">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&fit=crop&q=80" alt="Sea Whisper" loading="lazy">
+                </div>
+                <div class="menu-copy">
+                    <div class="menu-meta">
+                        <h3>Sea Whisper</h3>
+                        <span class="price">RM 52</span>
+                    </div>
+                    <p>Norwegian salmon finished with citrus emulsion, sea herbs and quick-pickled fennel for a plate that feels bright, clean, and memorable.</p>
+                    <div class="menu-tags"><span>Seafood</span><span>Fresh</span></div>
+                    <button class="btn btn-secondary menu-action" data-dish="Sea Whisper">Reserve this dish</button>
+                </div>
+            </article>
+            <article class="menu-item fade-in-up" data-category="signature">
+                <div class="menu-media">
+                    <img src="https://images.unsplash.com/photo-1551892376-3e171b4c85b7?w=700&fit=crop&q=80" alt="Forest Cream" loading="lazy">
+                </div>
+                <div class="menu-copy">
+                    <div class="menu-meta">
+                        <h3>Forest Cream</h3>
+                        <span class="price">RM 48</span>
+                    </div>
+                    <p>Handmade truffle pasta, wild mushrooms, and herb espuma that delivers the richness of the forest with elegant restraint.</p>
+                    <div class="menu-tags"><span>Vegetarian</span><span>Comfort</span></div>
+                    <button class="btn btn-secondary menu-action" data-dish="Forest Cream">Reserve this dish</button>
+                </div>
+            </article>
+            <article class="menu-item fade-in-up" data-category="meat">
+                <div class="menu-media">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=700&fit=crop&q=80" alt="Prime Ribeye" loading="lazy">
+                </div>
+                <div class="menu-copy">
+                    <div class="menu-meta">
+                        <h3>Prime Ribeye</h3>
+                        <span class="price">RM 120</span>
+                    </div>
+                    <p>Dry-aged 28 days, grilled to order and served with pommes anna and a velvety Bordelaise that honors classic steakhouse soul.</p>
+                    <div class="menu-tags"><span>Meat</span><span>Classic</span></div>
+                    <button class="btn btn-secondary menu-action" data-dish="Prime Ribeye">Reserve this dish</button>
+                </div>
+            </article>
+            <article class="menu-item fade-in-up" data-category="seafood">
+                <div class="menu-media">
+                    <img src="https://images.unsplash.com/photo-1490641933780-5bd2912b7f54?w=700&fit=crop&q=80" alt="Ocean's Pride" loading="lazy">
+                </div>
+                <div class="menu-copy">
+                    <div class="menu-meta">
+                        <h3>Ocean's Pride</h3>
+                        <span class="price">RM 95</span>
+                    </div>
+                    <p>Steamed Maine lobster with saffron butter, champagne sabayon, and the kind of richness that makes a night feel rare.</p>
+                    <div class="menu-tags"><span>Seafood</span><span>Luxury</span></div>
+                    <button class="btn btn-secondary menu-action" data-dish="Ocean's Pride">Reserve this dish</button>
+                </div>
+            </article>
+            <article class="menu-item fade-in-up" data-category="dessert">
+                <div class="menu-media">
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=700&fit=crop&q=80" alt="Velvet Dream" loading="lazy">
+                </div>
+                <div class="menu-copy">
+                    <div class="menu-meta">
+                        <h3>Velvet Dream</h3>
+                        <span class="price">RM 35</span>
+                    </div>
+                    <p>Warm chocolate soufflé with Tahitian vanilla ice cream and raspberry coulis for a finale that feels indulgent and effortless.</p>
+                    <div class="menu-tags"><span>Dessert</span><span>Decadent</span></div>
+                    <button class="btn btn-secondary menu-action" data-dish="Velvet Dream">Reserve this dish</button>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Social Gallery Section -->
+<section id="gallery" class="gallery section-light">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <span class="eyebrow">Guest moments</span>
+            <h2>Real-time social dining experiences from our table to yours.</h2>
+            <p>A curated gallery of guest stories, chef highlights, and plated moments that feel like the most shareable part of your evening.</p>
+        </div>
+        <div class="gallery-grid">
+            <article class="social-card fade-in-up">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&fit=crop&q=80" alt="Guest dinner" loading="lazy">
+                <div class="card-overlay">
+                    <span class="platform"><i class="fab fa-instagram"></i> @westwoodmoments</span>
+                    <p>“The lobster course was breathtaking—every detail felt purposeful.”</p>
+                </div>
+            </article>
+            <article class="social-card fade-in-up">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&fit=crop&q=80" alt="Shared dessert" loading="lazy">
+                <div class="card-overlay">
+                    <span class="platform"><i class="fab fa-instagram"></i> @klfoodguide</span>
+                    <p>“A perfected evening of elevated taste and impeccable service.”</p>
+                </div>
+            </article>
+            <article class="social-card fade-in-up">
+                <img src="https://images.unsplash.com/photo-1516685018646-5494b2c1d1fa?w=700&fit=crop&q=80" alt="Wine pairing" loading="lazy">
+                <div class="card-overlay">
+                    <span class="platform"><i class="fab fa-instagram"></i> @dineinstyle</span>
+                    <p>“Wine pairing by the sommelier made the evening feel unforgettable.”</p>
+                </div>
+            </article>
+            <article class="social-card fade-in-up">
+                <img src="https://images.unsplash.com/photo-1521302080357-4afd23aa5c05?w=700&fit=crop&q=80" alt="Chef plating" loading="lazy">
+                <div class="card-overlay">
+                    <span class="platform"><i class="fab fa-instagram"></i> @tasteofasia</span>
+                    <p>“The presentation alone is worth the reservation.”</p>
+                </div>
+            </article>
+        </div>
+        <div class="social-ticker fade-in-up">
+            <strong>Live feed:</strong> New table reserved in 3 minutes • Chef’s Table fully booked this weekend • 5-star review just posted on Instagram
+        </div>
+    </div>
+</section>
+
+<!-- Experiences Section -->
+<section id="experiences" class="experiences">
+    <div class="container">
+        <div class="experiences-header">
+            <h2 class="section-title">Curated Dining Experiences</h2>
+            <p class="experiences-subtitle">Beyond exceptional cuisine, we offer unforgettable moments</p>
+        </div>
+
+        <div class="experiences-grid">
+            <div class="experience-card">
+                <div class="experience-image">
+                    <img src="https://images.unsplash.com/photo-1551782450-17144efb5723?w=500&h=400&fit=crop&crop=center" alt="Private Dining">
+                </div>
+                <div class="experience-content">
+                    <h3>Private Dining Room</h3>
+                    <p>Intimate gatherings for special occasions, featuring personalized menus and dedicated service in our exclusive private dining space.</p>
+                    <div class="experience-details">
+                        <span>Capacity: 8-12 guests</span>
+                        <span>Custom menu available</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-image">
+                    <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=500&h=400&fit=crop&crop=center" alt="Wine Tasting">
+                </div>
+                <div class="experience-content">
+                    <h3>Wine Connoisseur Experience</h3>
+                    <p>Journey through our curated wine collection with our sommelier, featuring rare vintages paired with Chef Marcus's signature dishes.</p>
+                    <div class="experience-details">
+                        <span>Duration: 3 hours</span>
+                        <span>Premium wine selection</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-image">
+                    <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=500&h=400&fit=crop&crop=center" alt="Chef's Table">
+                </div>
+                <div class="experience-content">
+                    <h3>Chef's Table Experience</h3>
+                    <p>An exclusive behind-the-scenes culinary journey where you dine alongside Chef Marcus as he prepares your personalized tasting menu.</p>
+                    <div class="experience-details">
+                        <span>Limited to 6 guests</span>
+                        <span>Interactive cooking demonstration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reservation Section -->
+<section id="reservation" class="reservation">
+    <div class="container">
+        <div class="reservation-content">
+            <div class="reservation-info">
+                <h2 class="section-title">Reserve Your Experience</h2>
+                <p class="reservation-subtitle">Secure your table at Kuala Lumpur's premier fine dining destination</p>
+
+                <div class="reservation-details">
+                    <div class="detail">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours of Operation</h4>
+                            <p>Tuesday - Sunday: 6:00 PM - 11:00 PM</p>
+                            <p>Monday: Closed</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>123 Jalan Bukit Bintang<br>Kuala Lumpur, Malaysia</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Contact</h4>
+                            <p>+60 3 1234 5678</p>
+                            <p>reservations@westwoodbites.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reservation-policies">
+                    <h4>Dining Policies</h4>
+                    <ul>
+                        <li>Smart casual attire required</li>
+                        <li>Reservations recommended</li>
+                        <li>15-minute grace period for reservations</li>
+                        <li>Cancellation policy: 24 hours notice</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="reservation-form">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select id="guests" name="guests" required>
+                                <option value="">Select guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6+ Guests</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="occasion">Special Occasion</label>
+                            <select id="occasion" name="occasion">
+                                <option value="">Select occasion (optional)</option>
+                                <option value="birthday">Birthday</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="business">Business Dinner</option>
+                                <option value="celebration">Celebration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="requests">Special Requests</label>
+                        <textarea id="requests" name="requests" rows="3" placeholder="Dietary restrictions, allergies, seating preferences..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Confirm Reservation</button>
+                </form>
+
+                <div id="bookingMessage" class="booking-message"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Westwood Bites</h3>
+                <p>Culinary Excellence in Kuala Lumpur</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Dining</h4>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#experiences">Experiences</a></li>
+                        <li><a href="#reservation">Reservations</a></li>
+                        <li><a href="#">Private Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#chef">Chef Marcus</a></li>
+                        <li><a href="#">Awards</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+60312345678">+60 3 1234 5678</a></li>
+                        <li><a href="mailto:info@westwoodbites.com">info@westwoodbites.com</a></li>
+                        <li>123 Jalan Bukit Bintang</li>
+                        <li>Kuala Lumpur, Malaysia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Westwood Bites. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="app_modern.js"></script>
+</body>
+</html>
