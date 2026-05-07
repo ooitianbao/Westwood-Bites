@@ -1139,7 +1139,7 @@ p {
 /* 如果是移动端，可能需要更大的间距 */
 @media (max-width: 768px) {
     .hero-overlap {
-        padding-top: 12000px;
+        padding-top: 12px;
     }
 }
 }
