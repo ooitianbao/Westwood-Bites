@@ -44,14 +44,15 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 // Navbar scroll effect
 let lastScrollTop = 0;
 window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
+    const navbar = document.querySelector('.navbar-overlay');
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollTop > lastScrollTop && scrollTop > 100) {
-        navbar.style.transform = 'translateY(-100%)';
+    if (scrollTop > 100) {
+        navbar?.classList.add('scrolled');
     } else {
-        navbar.style.transform = 'translateY(0)';
+        navbar?.classList.remove('scrolled');
     }
+
     lastScrollTop = scrollTop;
 });
 
@@ -66,21 +67,32 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeElements.forEach(el => observer.observe(el));
 
-// Menu filtering
+// Menu filtering with enhanced animations
 menuFilters.forEach(btn => {
     btn.addEventListener('click', () => {
-        const filter = btn.dataset.filter || 'all';
+        const filter = btn.dataset.category || 'all';
 
         menuFilters.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
         menuItems.forEach(item => {
-            if (filter === 'all' || item.dataset.category === filter) {
+            const matches = filter === 'all' || item.dataset.category === filter;
+            if (matches) {
                 item.style.display = 'block';
-                setTimeout(() => item.style.opacity = '1', 10);
-            } else {
                 item.style.opacity = '0';
-                setTimeout(() => item.style.display = 'none', 300);
+                item.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    item.style.transition = 'all 0.5s ease';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, 10);
+            } else {
+                item.style.transition = 'all 0.3s ease';
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(-20px)';
+                setTimeout(() => {
+                    item.style.display = 'none';
+                }, 300);
             }
         });
     });
@@ -117,23 +129,23 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Initialize page
+// Initialize page with enhanced immersive experience
 document.addEventListener('DOMContentLoaded', () => {
-    // Add loading animation
+    // Enhanced loading animation
     document.body.style.opacity = '0';
     setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.transition = 'opacity 1s ease';
         document.body.style.opacity = '1';
-    }, 100);
+    }, 200);
 
     // Set active nav link based on scroll position
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.navbar-overlay .nav-link');
 
-    window.addEventListener('scroll', () => {
+    const updateActiveNav = () => {
         let current = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
+            const sectionTop = section.offsetTop - 120;
             if (pageYOffset >= sectionTop) {
                 current = section.getAttribute('id');
             }
@@ -145,7 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.classList.add('active');
             }
         });
-    });
+    };
+
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav(); // Initial call
 });
 
 menuFilters.forEach(button => {
@@ -156,7 +171,29 @@ menuFilters.forEach(button => {
         menuItems.forEach(item => {
             const matches = category === 'all' || item.dataset.category === category;
             item.style.display = matches ? 'grid' : 'none';
+            if (matches) {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    item.style.transition = 'all 0.5s ease';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, 10);
+            }
         });
+    });
+});
+
+// Add hover effects for menu items
+menuItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        item.style.transform = 'translateY(-5px) scale(1.02)';
+        item.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.3)';
+    });
+
+    item.addEventListener('mouseleave', () => {
+        item.style.transform = 'translateY(0) scale(1)';
+        item.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.2)';
     });
 });
 
@@ -177,17 +214,27 @@ reserveButtons.forEach(button => {
 });
 
 const socialFeed = [
-    'New booking confirmed for Chef’s Table this Friday.',
+    'New booking confirmed for Chef\'s Table this Friday.',
     'A 5-star guest review just posted on Instagram.',
     'Private dining room reserved for a VIP celebration.',
-    'Tonight’s lobster course is the most requested item.',
+    'Tonight\'s lobster course is the most requested item.',
+    'Chef\'s signature dish sold out for the weekend.',
+    'Exclusive wine pairing dinner available next month.'
 ];
 const ticker = document.querySelector('.social-ticker');
 let feedIndex = 0;
+
 function rotateFeed() {
     if (!ticker) return;
-    feedIndex = (feedIndex + 1) % socialFeed.length;
-    ticker.innerHTML = `<strong>Live feed:</strong> ${socialFeed[feedIndex]}`;
+    ticker.style.opacity = '0';
+    ticker.style.transform = 'translateY(10px)';
+    setTimeout(() => {
+        feedIndex = (feedIndex + 1) % socialFeed.length;
+        ticker.innerHTML = `<strong>Live feed:</strong> ${socialFeed[feedIndex]}`;
+        ticker.style.transition = 'all 0.5s ease';
+        ticker.style.opacity = '1';
+        ticker.style.transform = 'translateY(0)';
+    }, 250);
 }
 setInterval(rotateFeed, 5200);
 
@@ -212,6 +259,19 @@ window.addEventListener('scroll', () => {
 
 window.addEventListener('load', () => {
     document.body.style.opacity = '1';
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('.navbar-overlay .nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+            const top = targetSection.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({ top, behavior: 'smooth' });
+        }
+    });
 });
 
 if (bookingForm) {
