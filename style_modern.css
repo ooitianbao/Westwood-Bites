@@ -344,12 +344,14 @@ p {
     text-shadow: 0 6px 40px rgba(0, 0, 0, 0.9);
     animation: fadeInUp 1.2s ease-out;
 }
-.hero-overlap {
+
     position: relative;
-    /* 改为由内容决定高度，或者给一个更大的最小值 */
-    min-height: 120vh; 
-    padding-bottom: 100px; /* 给底部留点呼吸空间 */
-    overflow: visible; /* 确保内容不会被裁切 */
+    min-height: 100vh; /* 确保背景至少占满一个屏幕 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
 }
 .hero-content-overlap .eyebrow {
     text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
@@ -440,6 +442,10 @@ p {
         .about-card-overlap {
     /* 在原有代码基础上添加 */
     transform: translateY(100000000000000000000000000000000000px); /* 正数往下移，负数往上移 */
+            .about-card-overlap {
+    /* 在上面的基础上增加 */
+    margin-top: 50px; /* 数值越大，露出的背景越多 */
+}
 }
     
     /* 添加这一行：确保它在流式布局中也有间距感 */
