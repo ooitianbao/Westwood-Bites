@@ -1051,6 +1051,10 @@ p {
     .about-card-overlap {
         bottom: -20%;
     }
+    /* 在你的 CSS 文件中添加 */
+.content-section { 
+    padding-top: 100px; /* 这个数值应略大于或等于导航栏的高度 */
+}
 }
 @media (max-width: 768px) {
     .nav-toggle {
