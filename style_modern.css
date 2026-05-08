@@ -212,8 +212,8 @@ p {
     transform: translateY(-1px);
 }
 .logo-img {
-    width: 40000px;
-    height: 40000px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 .nav-menu {
@@ -1328,19 +1328,4 @@ p {
 
 .hero-overlap {
     padding-top: 100px; /* offset for fixed navbar */
-}
-.logo-img {
-    width: 4000px;
-    height: 4000px;
-    object-fit: contain;
-}
-:root {
-    /* 在这里定义一个变量，以后改这个数字就行了 */
-    --logo-size: 400px; 
-}
-
-.logo-img {
-    width: var(--logo-size);
-    height: auto; /* 保证不会变形 */
-    transition: width 0.3s ease; /* 增加一点平滑缩放效果 */
 }
