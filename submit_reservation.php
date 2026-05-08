@@ -1,8 +1,8 @@
 <?php
-include 'data.php'; // 引入数据库连接
+include 'data.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // 接收数据并防止 SQL 注入
+    // 接收并清理数据
     $name    = $conn->real_escape_string($_POST["full_name"]);
     $phone   = $conn->real_escape_string($_POST["phone_number"]);
     $email   = $conn->real_escape_string($_POST["email"]);
@@ -12,14 +12,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $occasion = $conn->real_escape_string($_POST["occasion"]);
     $request = $conn->real_escape_string($_POST["special_requests"]);
 
-    // 插入数据库的 SQL
     $sql = "INSERT INTO reservations (full_name, phone_number, email, booking_date, booking_time, guests, occasion, special_requests) 
             VALUES ('$name', '$phone', '$email', '$date', '$time', '$people', '$occasion', '$request')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "预约成功！数据已存入数据库。";
+        // 成功后弹窗并跳回首页，保护隐私
+        echo "<script>
+                alert('预约成功！我们会尽快联系您。');
+                window.location.href='index_new.html'; 
+              </script>";
     } else {
-        echo "错误: " . $conn->error;
+        echo "提交失败，请联系管理员: " . $conn->error;
     }
 
     $conn->close();
