@@ -212,8 +212,8 @@ p {
     transform: translateY(-1px);
 }
 .logo-img {
-    width: 400px;
-    height: 400px;
+    width: 40000px;
+    height: 40000px;
     object-fit: contain;
 }
 .nav-menu {
