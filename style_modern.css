@@ -1329,7 +1329,7 @@ p {
 .hero-overlap {
     padding-top: 100px; /* offset for fixed navbar */
 }
-.logo-img {
+.logo {
     width: 4000px;
     height: 4000px;
     object-fit: contain;
@@ -1339,7 +1339,7 @@ p {
     --logo-size: 400px; 
 }
 
-.logo-img {
+.logo {
     width: var(--logo-size);
     height: auto; /* 保证不会变形 */
     transition: width 0.3s ease; /* 增加一点平滑缩放效果 */
