@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="style_modern.css">
 </head>
 <body>
-
-<!-- Hero Section with Overlapping About -->
-<section id="home" class="hero-overlap">
+    <div class="lang-switcher">
+        <button onclick="toggleLanguage('en')" id="btn-en">EN</button>
+        <button onclick="toggleLanguage('zh')" id="btn-zh">中文</button>
+    </div>
+<div id="content-en" class="lang-content">
+    <section id="home" class="hero-overlap">
     <div class="hero-background">
         <video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1543353071-873f17a7a088?w=1600&auto=format&fit=crop&q=80">
             <source src="https://player.vimeo.com/external/370362195.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6ab7a0c4e6&profile_id=165" type="video/mp4">
@@ -140,6 +143,7 @@
             <button class="category-btn" data-category="starters">Starters</button>
             <button class="category-btn" data-category="mains">Mains</button>
             <button class="category-btn" data-category="dessert">Dessert</button>
+            <button class="category-btn" data-category="drinks">Drinks</button>
         </div>
 
         <div class="menu-grid">
@@ -225,6 +229,50 @@
                     <p>Vanilla bean custard baked until set and topped with a torched caramel shell. Served with espresso-friendly cane sugar crack.</p>
                     <div class="menu-tags"><span>Dessert</span><span>Classic</span></div>
                     <button class="btn btn-secondary menu-action" data-dish="Crème Brûlée">Reserve this dish</button>
+                </div>
+            </article>
+            <article class="menu-item fade-in-up" data-category="drinks">
+                <div class="menu-media">
+                    <img src="westwood bites_20.png" alt="Classic Dry Martini" loading="lazy">
+                </div>
+                <div class="menu-copy">
+                    <div class="menu-meta">
+                        <h3>Classic Dry Martini</h3>
+                        <span class="price">RM 58</span>
+                    </div>
+                    <p>An icy blend of gin and dry vermouth, finished simply with a twist of lemon peel or a fine olive. Known as the “king of cocktails,” this classic delivers a sharp, precise taste with a clean, crisp aroma—making it an excellent aperitif to pair with dishes like Beef Wellington and paella.
+                    </p>
+                    <button class="btn btn-secondary menu-action" data-dish="Classic Dry Martini">Reserve this drink</button>
+                </div>
+            </article>
+            <article class="menu-item fade-in-up" data-category="drinks">
+                <div class="menu-media">
+                    <img src="westwood bites_21.png" alt="Perrier-Jouet Belle Epoque" loading="lazy">
+                </div>
+                <div class="menu-copy">
+                    <div class="menu-meta">
+                        <h3>Perrier-Jou&euml;t &quot;Belle &Eacute;poque&quot;</h3>
+                        <span class="price">RM 980</span>
+                    </div>
+                    <p>Renowned for its iconic anemone-patterned bottle, this vintage Champagne is a blend of Chardonnay, Pinot Noir, and Pinot Meunier. Its bubbles are fine and delicate, with elegant aromas of peach, pear, and white flowers. Paired with French onion soup or crème brûlée, it instantly elevates the dining experience with a sense of occasion.
+</p>
+                    <div class="menu-tags"><span>Champagne</span><span>Prestige</span></div>
+                    <button class="btn btn-secondary menu-action" data-dish="Perrier-Jouet Belle Epoque">Reserve this drink</button>
+                </div>
+            </article>
+            <article class="menu-item fade-in-up" data-category="drinks">
+                <div class="menu-media">
+                    <img src="westwood bites_22.png" alt="Smoked Earl Grey Nojito" loading="lazy">
+                </div>
+                <div class="menu-copy">
+                    <div class="menu-meta">
+                        <h3>Smoked Earl Grey Nojito</h3>
+                        <span class="price">RM 36</span>
+                    </div>
+                    <p>Crafted especially for guests who prefer not to drink alcohol. This mocktail is built on a base of cold-brewed smoked Earl Grey tea, combined with fresh lime juice, mint leaves, and a touch of honey. Shaken and poured over ice, it’s finished with a garnish of orange peel and a sprig of rosemary. The first sip reveals a subtle woody smokiness, followed by the distinctive bergamot aroma of Earl Grey—pairing beautifully with risotto and Caesar salad.
+</p>
+                    <div class="menu-tags"><span>No Alcohol</span><span>Smoked</span></div>
+                    <button class="btn btn-secondary menu-action" data-dish="Smoked Earl Grey Nojito">Reserve this drink</button>
                 </div>
             </article>
         </div>
@@ -493,10 +541,252 @@
     </div>
 </footer>
 
-<script src="app_modern.js"></script>
 <footer style="margin-top: 50px; text-align: center;">
-    <p>&copy; 2026 Westwood Bites</p>
-    <a href="admin.php" style="color: #888; text-decoration: none; font-size: 10px;">Staff Login</a>
+<p>&copy; 2026 Westwood Bites</p>
+<a href="admin.php" style="color: #888; text-decoration: none; font-size: 10px;">Staff Login</a>
 </footer>
+</div>
+<div id="content-zh" class="lang-content" style="display: none;">
+    <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westwood Bites | 现代高级餐饮体验</title>
+    <meta name="description" content="位于吉隆坡的沉浸式精致餐饮体验，提供现代化数字菜单、无缝预约服务及优雅的品牌故事。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 保留字体引用 -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style_modern.css">
+</head>
+<body>
+
+<!-- 英雄区 (Hero Section) -->
+<section id="home" class="hero-overlap">
+    <div class="hero-background">
+        <video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1543353071-873f17a7a088?w=1600&auto=format&fit=crop&q=80">
+            <source src="https://player.vimeo.com/external/370362195.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6ab7a0c4e6&profile_id=165" type="video/mp4">
+        </video>
+        <div class="hero-gradient-overlay"></div>
+    </div>
+    
+    <nav class="navbar-overlay">
+        <div class="nav-container">
+            <a href="#home" class="logo" aria-label="Westwood Bites 首页">
+                <span class="logo-text">Westwood Bites</span>
+            </a>
+            <button class="nav-toggle" aria-label="切换导航">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#about" class="nav-link">关于我们</a></li>
+                <li><a href="#menu" class="nav-link">美味菜单</a></li>
+                <li><a href="#gallery" class="nav-link">客影留存</a></li>
+                <li><a href="#reservation" class="nav-link">立即预约</a></li>
+                <!-- 语言切换按钮 -->
+                <li><a href="en/index.html" class="nav-link" style="color: gold; font-weight: bold;">English</a></li>
+                <li><a href="#reservation" class="btn btn-cta nav-cta">在线订座</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="hero-content-overlap">
+        <span class="eyebrow">卓越的感官用餐体验</span>
+        <h1 class="hero-title">Westwood Bites</h1>
+        <p class="hero-subtitle">当烹饪艺术邂逅难忘瞬间。在吉隆坡市中心，体验传统与创新的完美融合。</p>
+        <div class="hero-actions">
+            <a href="#reservation" class="btn btn-cta">预约您的席位</a>
+            <a href="#menu" class="btn btn-secondary">探索经典菜单</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number">12</span>
+                <small class="stat-label">载卓越声誉</small>
+            </div>
+            <div class="stat">
+                <span class="stat-number">60+</span>
+                <small class="stat-label">季创意菜单</small>
+            </div>
+            <div class="stat">
+                <span class="stat-number">4.9/5</span>
+                <small class="stat-label">宾客满意评分</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 关于我们 -->
+<section id="about" class="about-section">
+    <div class="container about-centered">
+        <div class="about-copy">
+            <span class="eyebrow">品牌故事</span>
+            <h2>匠心传承，现代卓越</h2>
+            <p>主厨 Marcus Chen 成長于槟城那灯影摇曳的厨房里，在那儿他学会了如何利用简约与精准，将平凡的食材转化为令人难忘的佳肴。在 Westwood Bites，他的故事通过精心编排的课程、静谧的灯光和行云流水般的预约服务来呈现。</p>
+            <p>我们的哲学核心是：每一道菜都应像一个低声诉说的故事。每一次预约都应轻松惬意，每一个空间都应亲密温馨，让每一位宾客都带着值得分享的记忆离去。</p>
+            <div class="about-highlights">
+                <div class="highlight-card">
+                    <h3>主厨传承</h3>
+                    <p>亚洲香料的斑斓色彩邂逅法式烹饪的严谨结构，呈现出现代高级餐饮的戏剧张力。</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>现代创新</h3>
+                    <p>前沿技法与经久不衰的传统相结合，创造出触动灵魂的感官盛宴。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 主厨介绍 -->
+<section id="chef" class="chef">
+    <div class="container">
+        <div class="chef-content">
+            <div class="chef-image">
+                <img src="westwood bites_7.png" alt="主厨 Marcus Chen">
+                <div class="chef-awards">
+                    <div class="award">⭐ 米其林星级主厨</div>
+                    <div class="award">🏆 詹姆斯·比尔德奖提名</div>
+                    <div class="award">🥇 2023 亚洲年度最佳主厨</div>
+                </div>
+            </div>
+            <div class="chef-text">
+                <h2 class="section-title">对话主厨 Marcus Chen</h2>
+                <p class="chef-intro">Marcus Chen 为每一道菜注入了现代精准度与丰富的叙事感，所用食材皆精心溯源自马来西亚及世界各地。</p>
+                <p class="chef-title">行政主厨兼创意总监</p>
+                <p>主厨 Marcus Chen 的烹饪之旅始于槟城祖母的厨房，在那里他首次发现了新鲜食材与传统技法的魅力。在完成勒考登贝尔（Le Cordon Bleu）巴黎总校的深造，并于多家米其林三星餐厅担任副主厨后，Marcus 回到马来西亚，致力于打造既尊重传统又敢于突破的现代餐饮。</p>
+                <div class="chef-quote">
+                    <blockquote>“烹饪不仅是为了填饱腹囊，更是为了滋养灵魂，创造延续一生的美好回忆。”</blockquote>
+                    <cite>- 主厨 Marcus Chen</cite>
+                </div>
+                <div class="chef-signature">
+                    <img src="westwood bites_10.png" alt="主厨签名">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 菜单部分 (部分示例) -->
+<section id="menu" class="menu section-dark">
+    <div class="container">
+        <div class="section-header">
+            <span class="eyebrow">数字化菜单</span>
+            <h2>告别传统的 PDF，拥抱互动式赏味体验。</h2>
+            <p>每一道菜品都配有动人的故事描述、清晰的定价，并能快速预约最适合您今晚氛围的桌位。</p>
+        </div>
+        
+        <!-- 菜单项目只翻译第一个作为示范，其余依此类推 -->
+        <div class="menu-grid">
+            <article class="menu-item">
+                <div class="menu-media">
+                   <img src="westwood bites_1.png" alt="惠灵顿牛排">
+                </div>
+                <div class="menu-copy">
+                    <div class="menu-meta">
+                        <h3>经典惠灵顿牛排</h3>
+                        <span class="price">RM 198</span>
+                    </div>
+                    <p>选用中心切割的牛里脊，高温锁汁，包裹蘑菇泥与帕尔玛火腿，烤至金黄酥脆。搭配特制松露红酒酱。</p>
+                    <div class="menu-tags"><span>招牌必点</span><span>主菜</span></div>
+                    <button class="btn btn-secondary menu-action">预订此菜品</button>
+                </div>
+            </article>
+            <!-- 其他菜品如：Risotto 译为 “松露奶油炖饭”、Paella 译为 “西班牙海鲜饭” 等 -->
+        </div>
+    </div>
+</section>
+
+<!-- 预约区 -->
+<section id="reservation" class="reservation">
+    <div class="container">
+        <div class="reservation-content">
+            <div class="reservation-info">
+                <h2 class="section-title">开启您的美食旅程</h2>
+                <p class="reservation-subtitle">在吉隆坡首屈一指的精致餐厅预留您的席位</p>
+
+                <div class="reservation-details">
+                    <div class="detail">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>营业时间</h4>
+                            <p>周二至周日：18:00 - 23:00</p>
+                            <p>周一：休息</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>餐厅地址</h4>
+                            <p>吉隆坡，武吉免登路 123 号</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reservation-policies">
+                    <h4>用餐守则</h4>
+                    <ul>
+                        <li>需穿着时尚休闲正装 (Smart Casual)</li>
+                        <li>建议提前预约</li>
+                        <li>预约座位保留 15 分钟</li>
+                        <li>取消预约需提前 24 小时通知</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="reservation-form">
+                <form action="https://formspree.io/f/xykongqq" method="POST">
+                    <div class="form-group">
+                        <label>全名</label>
+                        <input type="text" name="姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <label>电子邮箱</label>
+                        <input type="email" name="邮箱" required>
+                    </div>
+                    <div class="form-row" style="display: flex; gap: 10px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label>用餐日期</label>
+                            <input type="date" name="日期" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label>用餐人数</label>
+                            <select name="人数" required>
+                                <option value="2">2 位</option>
+                                <option value="4">4 位</option>
+                                <option value="6+">6 位以上</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>特别要求</label>
+                        <textarea name="备注" rows="3" placeholder="过敏忌口或特殊需求..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" style="width: 100%; padding: 12px; background: #333; color: gold; border: 1px solid gold; font-weight: bold;">
+                        确认预约
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Westwood Bites. 版权所有。</p>
+            <a href="admin.php" style="color: #666; font-size: 10px;">员工登录</a>
+        </div>
+    </div>
+</footer>
+
+<script src="app_modern.js"></script>
+</body>
+</html>
+</div>
+<script src="app_modern.js"></script>
 </body>
 </html>
