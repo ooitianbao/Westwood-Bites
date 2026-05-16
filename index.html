@@ -784,6 +784,68 @@
 </footer>
 
 <script src="app_modern.js"></script>
+    <style>
+        .chef-signature-awards-row {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .chef-signature-awards-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .chef-signature-awards-list > * {
+            margin: 0 !important;
+        }
+
+        @media (max-width: 640px) {
+            .chef-signature-awards-row {
+                flex-direction: column;
+            }
+
+            .chef-signature-awards-list {
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const awardTexts = ['Michelin Star', 'James Beard Nominee', 'Asias Beef Chef 2023'];
+            const signatureImage = Array.from(document.querySelectorAll('img')).find(function (image) {
+                const imageText = `${image.alt || ''} ${image.src || ''}`.toLowerCase();
+                return imageText.includes('chef') && imageText.includes('signature');
+            });
+
+            if (!signatureImage) return;
+
+            const awards = Array.from(document.querySelectorAll('body *')).filter(function (element) {
+                return awardTexts.includes(element.textContent.trim());
+            });
+
+            if (!awards.length) return;
+
+            const row = document.createElement('div');
+            row.className = 'chef-signature-awards-row';
+
+            const awardsList = document.createElement('div');
+            awardsList.className = 'chef-signature-awards-list';
+
+            const originalParent = signatureImage.parentElement;
+            originalParent.insertBefore(row, signatureImage);
+            row.appendChild(signatureImage);
+            row.appendChild(awardsList);
+            awards.forEach(function (award) {
+                awardsList.appendChild(award);
+            });
+        });
+    </script>
 </body>
 </html>
 </div>
