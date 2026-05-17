@@ -185,8 +185,8 @@ p {
     width: 100%;
     z-index: 1000;
     background: transparent;
-    /* 1. 把原本的 1rem 改小，比如改成 0.5rem，或者直接写具体的像素 */
-    padding: 0.5rem 0 !important; /* 加上 !important */
+    /* 强制缩短上下内边距 */
+    padding: 0.3rem 0 !important; 
 }
 
 .nav-container {
@@ -194,10 +194,9 @@ p {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    /* 2. 把原本的最小高度 76px 改小，比如改成 50px 或 60px */
-    min-height: 56px; 
+    /* 强制限制最小高度 */
+    min-height: 50px !important; 
     padding: 0 1.5rem;
-    min-height: 50px !important;  /* 加上 !important */
 }
 .logo {
     display: inline-flex;
