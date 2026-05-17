@@ -201,6 +201,8 @@ p {
     /* 强制限制最小高度 */
     min-height: 50px !important; 
     padding: 0 1.5rem;
+    margin-right: 25px !important; /* 👈 每个字的右边空出 25 像素 */
+    margin-left: 25px !important;  /* 👈 每个字的左边空出 25 像素 */
 }
 .logo {
     display: inline-flex;
@@ -236,6 +238,9 @@ p {
     font-weight: 500;
     opacity: 0.9;
     transition: color 0.25s ease, opacity 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem; /* 👈 把这个数值调大！比如从 1rem 改到 2.5rem 甚至 3rem */
 }
 .nav-link:hover,
 .nav-link.active {
