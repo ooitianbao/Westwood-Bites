@@ -204,6 +204,19 @@ p {
     margin-right: 50px !important; /* 👈 每个字的右边空出 25 像素 */
     margin-left: 50px !important;  /* 👈 每个字的左边空出 25 像素 */
 }
+/* 控制 Logo 图片的大小 */
+.logo-img {
+    height: 40px;       /* 1. 限制高度，根据你导航栏的矮化程度，35px - 45px 左右最合适 */
+    width: auto;        /* 2. 宽度自动等比例缩放，防止图片变形 */
+    display: block;     /* 3. 清除图片下方的默认微小间隙 */
+}
+
+/* 如果你想让图片上下居中或者加点边距，可以调整它的父级 */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* 取消自带的下划线 */
+}
 .logo {
     display: inline-flex;
     align-items: center;
