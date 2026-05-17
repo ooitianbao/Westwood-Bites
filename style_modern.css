@@ -176,8 +176,6 @@ p {
     backdrop-filter: blur(18px);
     border-bottom: 1px solid rgba(255,255,255,0.06);
     display: none;
-    
-    /* 👇 加上这两行，确保滚动时出来的导航栏也和刚才一样矮 */
     height: 60px; 
     line-height: 60px; 
 }
@@ -189,7 +187,6 @@ p {
     width: 100%;
     z-index: 1000;
     background: transparent;
-    /* 强制缩短上下内边距 */
     padding: 0.3rem 0 !important; 
 }
 
@@ -198,34 +195,30 @@ p {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    /* 强制限制最小高度 */
     min-height: 50px !important; 
     padding: 0 1.5rem;
-    margin-right: 50px !important; /* 👈 每个字的右边空出 25 像素 */
-    margin-left: 50px !important;  /* 👈 每个字的左边空出 25 像素 */
+    margin-right: 50px !important;
+    margin-left: 50px !important;
 }
-/* 控制 Logo 图片的大小 */
 .logo-img {
-    height: 40px;       /* 1. 限制高度，根据你导航栏的矮化程度，35px - 45px 左右最合适 */
-    width: auto;        /* 2. 宽度自动等比例缩放，防止图片变形 */
-    display: block;     /* 3. 清除图片下方的默认微小间隙 */
+    height: 40px;
+    width: auto;
+    display: block;
 }
 
-/* 如果你想让图片上下居中或者加点边距，可以调整它的父级 */
 .logo {
     display: flex;
     align-items: center;
-    text-decoration: none; /* 取消自带的下划线 */
+    text-decoration: none;
 }
 .logo {
-    font-family: 'Cormorant Garamond', serif; /* 使用你引用的高级衬线字体 */
-    font-size: 1.4rem;                        /* 调整字号大小 */
-    font-weight: 600;                         /* 字体的粗细 */
-    letter-spacing: 2px;                      /* 🌟 让字母之间有一点点空隙，会显得非常高级 */
-    color: #ffffff !important;                /* 确保字是纯白色 */
-    text-decoration: none;                    /* 去掉自带的下划线 */
-    text-transform: uppercase;                /* 强制转换成大写 */
-}
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #ffffff !important;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 .logo:hover {
     background: rgba(212,175,55,0.22);
@@ -241,10 +234,8 @@ p {
 .nav-menu {
    display: flex;
     align-items: center;
-    /* 👇 核心代码：把间距调大，可以根据需要把 2rem 改成 2.5rem 或 3rem */
     gap: 2.5rem !important; 
-    
-    list-style: none; /* 顺便确保列表默认的圆点不会乱跑 */
+    list-style: none;
 }
 .nav-link {
     color: var(--text);
@@ -255,7 +246,7 @@ p {
     transition: color 0.25s ease, opacity 0.25s ease;
     display: flex;
     align-items: center;
-    gap: 2.5rem; /* 👈 把这个数值调大！比如从 1rem 改到 2.5rem 甚至 3rem */
+    gap: 2.5rem;
 }
 .nav-link:hover,
 .nav-link.active {
@@ -1311,9 +1302,9 @@ p {
     .about-grid {
         grid-template-columns: 1fr;
     }
-    /* 鍦ㄤ綘鐨?CSS 鏂囦欢涓坊鍔?*/
+    /* Content spacing for the fixed navigation bar */
 .content-section { 
-    padding-top: 100px; /* 杩欎釜鏁板€煎簲鐣ュぇ浜庢垨绛変簬瀵艰埅鏍忕殑楂樺害 */
+    padding-top: 100px;
 }
 }
 @media (max-width: 768px) {
@@ -1391,68 +1382,9 @@ p {
 .hero-overlap {
     padding-top: 100px; /* offset for fixed navbar */
 }
-/* 大包裹盒子：强制左右排列并等高 */
-.chef-section-container {
-    display: flex;
-    flex-direction: row;      /* 确保横向排列 */
-    align-items: stretch;     /* 🌟 核心：强制左右两边高度完全对齐一致 */
-    justify-content: center;  /* 整体居中 */
-    gap: 0;                   /* 如果想要无缝拼接成一个长方形，设为0；想要间距可以改 20px */
-    max-width: 1000px;        /* 可以根据需要限制整体长方形的最大宽度 */
-    margin: 2rem auto;        /* 上下留出间距，左右居中 */
-    border-radius: 12px;      /* 外层大长方形加点圆角更精致 */
-    overflow: hidden;         /* 确保圆角能切齐图片 */
-}
-
-/* 左侧图片盒子：平分或按比例占据空间 */
-.chef-image-box {
-    flex: 1;                  /* 左右等宽（或者根据需要微调） */
-    display: flex;
-}
-
-.chef-image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;        /* 🌟 核心：确保图片拉伸填满左侧时，不会变形 */
-}
-/* 荣誉标签的总容器（缩小版） */
-.chef-honors {
-    display: flex;
-    justify-content: flex-start;
-    gap: 2rem;                      /* 缩小两个标签之间的间距 */
-    margin-top: 1.5rem;             /* 缩小与上面文字的距离 */
-    border-top: 1px solid rgba(255, 255, 255, 0.08); /* 线条更淡一点 */
-    padding-top: 1.2rem;
-}
-
-/* 单个荣誉项目 */
-.honor-item {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;                    /* 缩小数字和文字之间的间距 */
-}
-
-/* 金色的大数字（缩小版） */
-.honor-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;                /* 从 2.8rem 缩小到 2rem */
-    font-weight: 400;
-    color: #d4af37;                 
-    line-height: 1;
-}
-
-/* 数字右边的说明文字（缩小版） */
-.honor-text {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.68rem;             /* 字体进一步缩小，更显精致 */
-    text-transform: uppercase;      
-    letter-spacing: 1px;            
-    color: #8e8e8e;                 /* 颜色稍微调暗一点点，显得更低调 */
-    line-height: 1.2;
-}
-/* ==================== 顶部纯文字 LOGO 修复 ==================== */
+/* Text logo refinement */
 .logo {
-    background: transparent !important; /* 强制去掉左上角多余的阴影小方框 */
+    background: transparent !important;
     border: none !important;
     padding: 0 !important;
     font-family: 'Cormorant Garamond', serif;
@@ -1464,58 +1396,95 @@ p {
     text-transform: uppercase;
 }
 
-/* ==================== 主厨大长方形板块完美对齐 ==================== */
-.chef-section-container {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: stretch !important; /* 强行让左右两边高度完全对齐 */
-    max-width: 1000px;
-    margin: 3rem auto;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #121212; /* 确保整体有一个干净的深黑背景 */
+.chef-brand-panel {
+    display: grid;
+    gap: 1.6rem;
+    margin-top: 2.5rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
+    border: 1px solid rgba(212,175,55,0.14);
+    border-radius: 8px;
 }
 
-.chef-image-box {
-    flex: 1 !important;
-    display: flex !important;
+.chef-brand-panel .chef-quote {
+    margin: 0;
+    padding: 0 0 1.4rem 1.35rem;
+    background: transparent;
+    border-left: 2px solid var(--accent);
+    border-radius: 0;
 }
 
-.chef-image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover !important; /* 防止图片变形 */
+.chef-brand-panel .chef-quote blockquote {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.9);
 }
 
-/* 右侧文字盒子：彻底清除所有旧的重叠框样式 */
-.chef-text-box {
-    flex: 1 !important;
-    background: #121212 !important;
-    padding: 3rem !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important; /* 寄语在上，荣誉在下，绝不重叠 */
-    border: none !important; /* 去掉多余的旧边框 */
+.chef-brand-footer {
+    display: grid;
+    grid-template-columns: minmax(180px, 220px) 1fr;
+    align-items: end;
+    gap: 1.5rem;
+    min-height: 150px;
 }
 
-/* 寄语文字样式 */
-.chef-quote {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1rem !important;
-    color: #e0e0e0 !important;
-    line-height: 1.6 !important;
-    margin: 0 0 1rem 0 !important;
-    background: transparent !important; /* 彻底删掉原本包裹它的灰色方块背景 */
-    padding: 0 !important;
-    border: none !important;
+.chef-brand-panel .chef-signature {
+    align-self: end;
 }
 
-/* 主厨名字样式 */
-.chef-name {
+.chef-brand-panel .chef-signature img {
+    width: 220px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.26);
+}
+
+.chef-honors {
+    align-self: end;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+    gap: 1rem;
+    width: min(100%, 360px);
+    padding-top: 1.1rem;
+    border-top: 1px solid rgba(212,175,55,0.22);
+}
+
+.honor-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: end;
+    gap: 0.65rem;
+}
+
+.honor-number {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem !important;
-    color: #ffffff !important;
-    margin: 0 0 2rem 0 !important;
+    font-size: clamp(2rem, 3vw, 2.65rem);
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 0.9;
 }
 
+.honor-text {
+    max-width: 7.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.66rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.58);
+    line-height: 1.35;
+}
+
+@media (max-width: 768px) {
+    .chef-brand-footer,
+    .chef-honors {
+        grid-template-columns: 1fr;
+    }
+
+    .chef-honors {
+        justify-self: stretch;
+        width: 100%;
+    }
+}
 
