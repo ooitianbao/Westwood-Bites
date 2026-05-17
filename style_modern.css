@@ -226,10 +226,12 @@ p {
     letter-spacing: 0.02em;
 }
 .nav-menu {
-    display: flex;
-    flex-wrap: wrap;
+   display: flex;
     align-items: center;
-    gap: 1rem;
+    /* 👇 核心代码：把间距调大，可以根据需要把 2rem 改成 2.5rem 或 3rem */
+    gap: 2.5rem !important; 
+    
+    list-style: none; /* 顺便确保列表默认的圆点不会乱跑 */
 }
 .nav-link {
     color: var(--text);
