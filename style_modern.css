@@ -1391,4 +1391,39 @@ p {
 .hero-overlap {
     padding-top: 100px; /* offset for fixed navbar */
 }
+/* 大包裹盒子：强制左右排列并等高 */
+.chef-section-container {
+    display: flex;
+    flex-direction: row;      /* 确保横向排列 */
+    align-items: stretch;     /* 🌟 核心：强制左右两边高度完全对齐一致 */
+    justify-content: center;  /* 整体居中 */
+    gap: 0;                   /* 如果想要无缝拼接成一个长方形，设为0；想要间距可以改 20px */
+    max-width: 1000px;        /* 可以根据需要限制整体长方形的最大宽度 */
+    margin: 2rem auto;        /* 上下留出间距，左右居中 */
+    border-radius: 12px;      /* 外层大长方形加点圆角更精致 */
+    overflow: hidden;         /* 确保圆角能切齐图片 */
+}
+
+/* 左侧图片盒子：平分或按比例占据空间 */
+.chef-image-box {
+    flex: 1;                  /* 左右等宽（或者根据需要微调） */
+    display: flex;
+}
+
+.chef-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* 🌟 核心：确保图片拉伸填满左侧时，不会变形 */
+}
+
+/* 右侧文字盒子：继承原本的黑金风格 */
+.chef-text-box {
+    flex: 1;                  /* 左右等宽 */
+    background: #121212;      /* 保持你原本的深黑背景色 */
+    padding: 3rem;            /* 内部留白，让文字呼吸 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* 文字内容在右侧上下居中 */
+    border-left: 3px solid #d4af37; /* 顺便把原本左边的金边移到这里 */
+}
 
