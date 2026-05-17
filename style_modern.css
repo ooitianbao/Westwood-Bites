@@ -1426,4 +1426,48 @@ p {
     justify-content: center;  /* 文字内容在右侧上下居中 */
     border-left: 3px solid #d4af37; /* 顺便把原本左边的金边移到这里 */
 }
+/* 优化右侧大盒子，让它内部的内容上下两头撑开 */
+.chef-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 🌟 核心：让寄语在上面，荣誉标签自动沉到最下面 */
+    padding: 3.5rem;
+    background: #121212;
+}
+
+/* 荣誉标签的总容器 */
+.chef-honors {
+    display: flex;
+    justify-content: flex-start;
+    gap: 3.5rem;                    /* 两个标签之间的横向间距 */
+    margin-top: 3rem;               /* 与上方主厨名字隔开距离 */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* 加一条淡淡的分割线，更精致 */
+    padding-top: 2rem;
+}
+
+/* 单个荣誉项目 */
+.honor-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;                      /* 数字和文字之间的间距 */
+}
+
+/* 金色的大数字 */
+.honor-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;              /* 放大数字 */
+    font-weight: 400;
+    color: #d4af37;                 /* 经典的金色 */
+    line-height: 1;
+}
+
+/* 数字右边的说明文字 */
+.honor-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;             /* 小字更显高级 */
+    text-transform: uppercase;      /* 强制大写 */
+    letter-spacing: 1px;            /* 字间距拉开 */
+    color: #a0a0a0;                 /* 优雅的低调灰色 */
+    line-height: 1.3;
+}
 
