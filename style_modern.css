@@ -176,6 +176,10 @@ p {
     backdrop-filter: blur(18px);
     border-bottom: 1px solid rgba(255,255,255,0.06);
     display: none;
+    
+    /* 👇 加上这两行，确保滚动时出来的导航栏也和刚才一样矮 */
+    height: 60px; 
+    line-height: 60px; 
 }
 
 .navbar-overlay {
