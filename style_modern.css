@@ -32,6 +32,53 @@
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
+    --page-bg: #000000;
+    --section-bg: #090909;
+    --section-alt: rgba(255,255,255,0.03);
+    --card-bg: rgba(255,255,255,0.05);
+    --card-border: rgba(255,255,255,0.08);
+    --nav-bg: rgba(0, 0, 0, 0.8);
+    --nav-scrolled-bg: rgba(0, 0, 0, 0.95);
+    --hero-overlay: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 80%, rgba(0,0,0,0.95) 100%);
+    --field-bg: rgba(255,255,255,0.04);
+    --subtle-line: rgba(255,255,255,0.08);
+    --button-text: #050505;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f7f2e8;
+    --surface: rgba(255, 250, 240, 0.95);
+    --panel: rgba(255, 255, 255, 0.76);
+    --border: rgba(154, 113, 28, 0.22);
+    --accent: #9b741f;
+    --accent-soft: rgba(155, 116, 31, 0.12);
+    --text: #17130d;
+    --muted: #625845;
+    --text-primary: #17130d;
+    --text-secondary: #3f382c;
+    --text-muted: #6f6553;
+    --accent-gold: #9b741f;
+    --accent-gold-light: #c79a35;
+    --accent-gold-dark: #765713;
+    --border-color: rgba(155, 116, 31, 0.26);
+    --glass-bg: rgba(255, 255, 255, 0.68);
+    --glass-border: rgba(155, 116, 31, 0.18);
+    --page-bg: #f7f2e8;
+    --section-bg: #fffaf0;
+    --section-alt: #f1eadc;
+    --card-bg: rgba(255, 255, 255, 0.72);
+    --card-border: rgba(155, 116, 31, 0.18);
+    --nav-bg: rgba(255, 250, 240, 0.88);
+    --nav-scrolled-bg: rgba(255, 250, 240, 0.96);
+    --hero-overlay: linear-gradient(180deg, rgba(18,13,7,0.2) 0%, rgba(247,242,232,0.14) 45%, rgba(247,242,232,0.78) 100%);
+    --field-bg: rgba(255, 255, 255, 0.8);
+    --subtle-line: rgba(23, 19, 13, 0.12);
+    --button-text: #fffaf0;
+    --shadow: 0 20px 60px rgba(102, 80, 36, 0.16);
+    --shadow-soft: 0 4px 20px rgba(102, 80, 36, 0.12);
+    --shadow-medium: 0 8px 32px rgba(102, 80, 36, 0.14);
+    --shadow-strong: 0 16px 64px rgba(102, 80, 36, 0.18);
 }
 * {
     margin: 0;
@@ -45,11 +92,11 @@ html {
 body {
     min-height: 100vh;
     font-family: 'Cinzel', serif;
-    background: #000000;
+    background: var(--page-bg);
     color: var(--text);
     overflow-x: hidden;
     opacity: 0;
-    transition: opacity 0.8s ease;
+    transition: opacity 0.8s ease, background-color 0.35s ease, color 0.35s ease;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
@@ -1505,5 +1552,156 @@ p {
         justify-self: stretch;
         width: 100%;
     }
+}
+
+/* Theme toggle and light mode refinement */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-height: 38px;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid rgba(212,175,55,0.35);
+    border-radius: 999px;
+    background: var(--card-bg);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    transform: translateY(-1px);
+}
+
+.theme-toggle-icon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: inset -5px -4px 0 rgba(0,0,0,0.35);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+:root[data-theme="light"] .theme-toggle-icon {
+    background: var(--accent-gold-light);
+    box-shadow: 0 0 0 4px rgba(155,116,31,0.15);
+}
+
+.btn-primary,
+.btn-cta,
+.award,
+.reservation-form button[type="submit"] {
+    color: var(--button-text) !important;
+}
+
+.navbar,
+.navbar-overlay {
+    background: var(--nav-bg);
+    border-bottom-color: var(--border-color);
+}
+
+.navbar-overlay.scrolled,
+.footer {
+    background: var(--nav-scrolled-bg);
+}
+
+.hero-gradient-overlay {
+    background: var(--hero-overlay);
+}
+
+.section-dark,
+.experiences {
+    background: var(--section-bg);
+}
+
+.section-light {
+    background: var(--section-alt);
+}
+
+.about-section,
+.chef,
+.reservation {
+    background: linear-gradient(180deg, var(--page-bg), var(--section-bg));
+}
+
+.stat,
+.highlight-card,
+.menu-item,
+.social-ticker,
+.experience-card,
+.reservation-info,
+.reservation-form,
+.chef-quote,
+.chef-brand-panel,
+.social-link {
+    background: var(--card-bg);
+    border-color: var(--card-border);
+}
+
+.detail,
+.footer,
+.footer-bottom,
+.chef-brand-footer {
+    border-color: var(--subtle-line);
+}
+
+.category-btn,
+.form-group input,
+.form-group select,
+.form-group textarea,
+.field-group input,
+.field-group select,
+.field-group textarea {
+    border-color: var(--subtle-line);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.field-group input,
+.field-group select,
+.field-group textarea {
+    background: var(--field-bg);
+    color: var(--text);
+}
+
+.form-group select option,
+.field-group select option {
+    background: var(--section-bg);
+    color: var(--text);
+}
+
+.menu-copy p,
+.experience-copy p,
+.about-copy p {
+    color: var(--text-secondary);
+}
+
+:root[data-theme="light"] .logo,
+:root[data-theme="light"] .navbar-overlay .logo {
+    color: var(--text) !important;
+}
+
+:root[data-theme="light"] .hero-title,
+:root[data-theme="light"] .hero-content-overlap .hero-subtitle,
+:root[data-theme="light"] .hero-content-overlap .eyebrow {
+    color: var(--text-primary);
+    text-shadow: 0 2px 22px rgba(255,255,255,0.72);
+}
+
+:root[data-theme="light"] .stat-label,
+:root[data-theme="light"] .honor-text {
+    color: var(--text-muted);
+}
+
+:root[data-theme="light"] .card-overlay {
+    background: linear-gradient(180deg, transparent 30%, rgba(23,19,13,0.72));
 }
 
