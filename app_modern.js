@@ -8,6 +8,34 @@ const menuItems = document.querySelectorAll('.menu-item');
 const fadeElements = document.querySelectorAll('.fade-in-up');
 const bookingForm = document.getElementById('bookingForm');
 const bookingMessage = document.getElementById('bookingMessage');
+const themeToggle = document.querySelector('.theme-toggle');
+const themeToggleText = document.querySelector('.theme-toggle-text');
+const root = document.documentElement;
+const aboutParallax = document.querySelector('.about-parallax');
+
+function applyTheme(theme) {
+    if (theme === 'light') {
+        root.dataset.theme = 'light';
+    } else {
+        delete root.dataset.theme;
+    }
+
+    const isLight = theme === 'light';
+    themeToggle?.setAttribute('aria-pressed', String(isLight));
+    themeToggle?.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+    if (themeToggleText) {
+        themeToggleText.textContent = isLight ? 'Dark' : 'Light';
+    }
+}
+
+const initialTheme = localStorage.getItem('westwood-theme') || 'dark';
+applyTheme(initialTheme);
+
+themeToggle?.addEventListener('click', () => {
+    const nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('westwood-theme', nextTheme);
+    applyTheme(nextTheme);
+});
 
 // Mobile navigation toggle
 function toggleNav() {
@@ -296,3 +324,4 @@ if (bookingForm) {
         submitButton.disabled = false;
     });
 }
+
