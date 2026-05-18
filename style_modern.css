@@ -44,7 +44,7 @@ html {
 }
 body {
     min-height: 100vh;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cinzel', serif;
     background: #000000;
     color: var(--text);
     overflow-x: hidden;
@@ -80,7 +80,7 @@ button, .btn {
 
 /* ===== LUXURIOUS TYPOGRAPHY ===== */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-weight: 400;
     line-height: 1.2;
     color: var(--text-primary);
@@ -108,7 +108,7 @@ h3 {
 }
 
 p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cinzel', serif;
     font-weight: 300;
     line-height: 1.7;
     color: var(--text-secondary);
@@ -212,7 +212,7 @@ p {
     text-decoration: none;
 }
 .logo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -225,7 +225,7 @@ p {
     transform: translateY(-1px);
 }
 .logo-text {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: 1rem;
     font-weight: 700;
     color: var(--text);
@@ -345,7 +345,7 @@ p {
 }
 
 .navbar-overlay .logo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -367,7 +367,7 @@ p {
 }
 
 .hero-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: clamp(5rem, 10vw, 7rem);
     font-weight: 700;
     line-height: 0.85;
@@ -453,14 +453,14 @@ p {
 }
 
 .about-copy h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: clamp(3rem, 5vw, 4rem);
     margin-bottom: 2rem;
     color: var(--text-primary);
 }
 
 .about-copy p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cinzel', serif;
     font-weight: 300;
     line-height: 1.8;
     color: var(--text-secondary);
@@ -554,7 +554,7 @@ p {
     text-align: center;
 }
 .section-header h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: clamp(2rem, 4vw, 3rem);
     margin: 0.75rem 0 1rem;
 }
@@ -563,7 +563,7 @@ p {
     line-height: 1.85;
 }
 .section-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: clamp(2rem, 4vw, 3rem);
     color: var(--accent);
     margin-bottom: 1rem;
@@ -833,7 +833,7 @@ p {
     align-items: center;
 }
 .about-copy h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: clamp(2.4rem, 4vw, 3.4rem);
     margin-bottom: 1.5rem;
 }
@@ -1114,7 +1114,7 @@ p {
     align-items: start;
 }
 .reservation-copy h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: clamp(2.3rem, 4vw, 3.2rem);
     margin-bottom: 1.5rem;
 }
@@ -1387,7 +1387,7 @@ p {
     background: transparent !important;
     border: none !important;
     padding: 0 !important;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -1467,7 +1467,7 @@ p {
 }
 
 .honor-number {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cinzel', serif;
     font-size: clamp(2rem, 3vw, 2.65rem);
     font-weight: 600;
     color: var(--accent);
@@ -1476,7 +1476,7 @@ p {
 
 .honor-text {
     max-width: 7.5rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 0.66rem;
     font-weight: 500;
     text-transform: uppercase;
